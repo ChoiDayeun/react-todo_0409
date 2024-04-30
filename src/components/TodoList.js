@@ -5,10 +5,10 @@
 */
 "use client";
 
-// import React, { useState } from "react";
 import React, { useState, useEffect } from "react";
 import TodoItem from "@/components/TodoItem";
-import styles from "@/styles/TodoList.module.css";
+import 'tailwindcss/tailwind.css';
+import { Button } from "./ui/button";
 
 // firebase 코드 추가 0430
 // firebase 관련 모듈을 불러옵니다.
@@ -120,17 +120,17 @@ const TodoList = () => {
 
   // 컴포넌트를 렌더링합니다.
   return (
-    <div className={styles.container}>
-      <h1>Todo List</h1>
+    <div className="container mx-auto max-w-md">
+      <h1 className="text-3xl font-bold mb-4">Todo List</h1>
       {/* 할 일을 입력받는 텍스트 필드입니다. */}
       <input
         type="text"
-        className={styles.itemInput}
+        className="border border-gray-300 rounded px-4 py-2 mb-4 w-full"
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
       {/* 할 일을 추가하는 버튼입니다. */}
-      <button className={styles.addButton} onClick={addTodo}>
+      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onClick={addTodo}>
         Add Todo
       </button>
       {/* 할 일 목록을 렌더링합니다. */}
