@@ -17,6 +17,12 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        // 여기에 사용할 폰트를 추가하세요.
+        sans: ['Gothic A1', 'sans-serif'],
+        serif: ['Gothic A1', 'serif'],
+        mono: ['Gothic A1', 'monospace'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
