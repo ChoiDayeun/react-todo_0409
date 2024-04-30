@@ -7,11 +7,12 @@
 import React from "react";
 import { Button } from "@/components/ui/button"
 
+
 // TodoItem 컴포넌트를 정의합니다.
 const TodoItem = ({ todo, onToggle, onDelete }) => {
   // 각 할 일 항목을 렌더링합니다.
   return (
-    <li className="flex items-center justify-between border-b border-gray-300 py-2">
+    <li className="flex items-center justify-between border-b border-gray-300 py-3">
       {/* 체크박스를 렌더링하고, 체크박스의 상태를 할 일의 완료 상태와 동기화합니다.
           체크박스의 상태가 변경되면 onToggle 함수를 호출하여 완료 상태를 업데이트합니다. */}
       <input type="checkbox" checked={todo.completed} onChange={onToggle} className="mr-2" />
@@ -24,9 +25,7 @@ const TodoItem = ({ todo, onToggle, onDelete }) => {
       </span>
 
       {/* 삭제 버튼을 렌더링하고, 클릭 시 onDelete 함수를 호출하여 해당 할 일을 삭제합니다. */}
-      <button onClick={onDelete} className="ml-2 bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
-      Delete
-      </button>
+      <Button className="w-3/12" variant="outline" onClick={onDelete}>Delete</Button>
     </li>
   );
 };
