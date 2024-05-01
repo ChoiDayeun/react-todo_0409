@@ -156,7 +156,7 @@ const TodoList = () => {
   // 컴포넌트를 렌더링합니다.
   return (
     <div className="mx-auto text-center bg-white p-4 rounded-lg shadow-lg">
-      <h1 className="text-2xl font-extrabold mt-3">Todo List ✅</h1>
+      <h1 className="text-2xl text-center w-full font-extrabold mt-3">Todo List ✅</h1>
       {/* 할 일을 입력받는 텍스트 필드입니다. */}
       <div className="flex justify-between mb-4"></div>
         <input
